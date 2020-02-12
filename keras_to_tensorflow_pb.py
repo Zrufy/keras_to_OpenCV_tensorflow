@@ -152,7 +152,7 @@ if __name__ == '__main__':
 
 	# load frozen graph
 	input_graph_def = tf.GraphDef()
-	with tf.gfile.Open(os.path.join(output_folder, frozen_graph_name), "r") as f:
+	with tf.gfile.Open(os.path.join(output_folder, frozen_graph_name), "rb") as f:
 	    data = f.read()
 	    input_graph_def.ParseFromString(data)
 		
